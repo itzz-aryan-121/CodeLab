@@ -1,110 +1,131 @@
 .room {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     min-height: 100vh;
-    padding: 10px 10px 20px;
+    padding: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .roomSidebar {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .languageFieldWrapper {
-    padding: 2px 6px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
+    padding: 8px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
 }
 
 .languageField {
-    padding: 6px 10px;
-    background-color: #f0f0f0;
+    padding: 12px 16px;
+    background-color: #2d2d2d;
     border: none;
     outline: none;
-    text-transform: capitalize;
+    font-size: 16px;
+    color: #f5f5f5;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-.roomCodeEditor {
-    flex: 1;
+.languageField:focus {
+    border: 2px solid #ff6f00;
+    background-color: #333;
 }
+
+
 
 .roomSidebarCopyBtn {
-    font-size: 75%;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 12px 22px;
     color: white;
-    background-color: #ffdd00;
-    border: 1px solid #ffdd00;
-    outline: none;
-    border-radius: 5px;
+    background-image: linear-gradient(45deg, #3b82f6, #9333ea);
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.45s ease-in-out 0.05s;
+    transition: all 0.3s ease-in-out;
 }
+
 .roomSidebarCopyBtn:hover {
-    color: black;
-    background-color: white;
+    background-color: #e65100;
+    transform: translateY(-2px);
 }
 
 .roomSidebarBtn {
-    font-size: 75%;
+    font-size: 16px;
     font-weight: bold;
-    padding: 10px 15px;
-    background-color: white;
-    border: 1px solid black;
+    padding: 12px 22px;
+    background-color: #333;
+    border: 1px solid #444;
     outline: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.45s ease-in-out 0.05s;
+    transition: all 0.3s ease-in-out;
 }
+
 .roomSidebarBtn:hover {
-    color: white;
-    background-color: black;
+    background-color: #444;
+    color: #f5f5f5;
 }
 
 .roomSidebarUsersWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .roomSidebarUsers {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .roomSidebarUsersEach {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-items: center;
+    align-items: center;
 }
 
 .roomSidebarUsersEachAvatar {
     color: white;
-    border-radius: 5px;
-    min-width: 30px;
-    min-height: 30px;
-    padding: 5px;
-    font-size: small;
-
+    background-color: #444;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    font-size: 18px;
     display: grid;
     place-items: center;
 }
 
 .roomSidebarUsersEachName {
     font-weight: bold;
-    font-size: small;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
 }
 
 @media screen and (min-width: 991px) {
     .room {
         flex-direction: row;
+        gap: 30px;
     }
 
     .roomSidebar {
-        flex: 0.25;
+        flex: 0.3;
     }
 
     .roomSidebar > *:nth-child(2) {
@@ -112,6 +133,59 @@
     }
 
     .roomCodeEditor {
-        flex: 0.75;
+        flex: 0.7;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .room {
+        padding: 15px;
+    }
+
+    .roomSidebarCopyBtn,
+    .roomSidebarBtn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .roomSidebarUsersEach {
+        font-size: 14px;
+    }
+
+    .languageField {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .room {
+        padding: 10px;
+    }
+
+    .roomSidebar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .roomSidebarUsers {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+.roomCodeEditor {
+    flex: 1;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: #f5f5f5;
+    padding: 8px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    text-decoration: none !important; 
+}
+
+

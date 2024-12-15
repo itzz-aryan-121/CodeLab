@@ -30,7 +30,9 @@ export default function JoinRoom() {
     return (
         <div className="joinBoxWrapper">
             <form className="joinBox" onSubmit={handleRoomSubmit}>
-                <p>Paste your invitation code down below</p>
+                <h1>CodeLab</h1>
+                <p className="sign">Sign in to Collab</p>
+                
 
                 <div className="joinBoxInputWrapper">
                     <input
@@ -44,7 +46,7 @@ export default function JoinRoom() {
                         autoSave="off"
                         autoComplete="off"
                     />
-                    <label htmlFor="roomIdInput" className="joinBoxWarning">{roomId ? '' : "Room ID required"}</label>
+                    {/* <label htmlFor="roomIdInput" className="joinBoxWarning">{roomId ? '' : "Room ID required"}</label> */}
                 </div>
 
                 <div className="joinBoxInputWrapper">
@@ -59,7 +61,7 @@ export default function JoinRoom() {
                         autoSave="off"
                         autoComplete="off"
                     />
-                    <label htmlFor="usernameInput" className="joinBoxWarning">{username ? '' : "username required"}</label>
+                    {/* <label htmlFor="usernameInput" className="joinBoxWarning">{username ? '' : "username required"}</label> */}
                 </div>
 
                 <button className="joinBoxBtn" type="submit">Join</button>

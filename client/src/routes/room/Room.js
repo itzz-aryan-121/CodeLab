@@ -30,8 +30,8 @@ export default function Room({ socket }) {
   const [language, setLanguage] = useState(() => "javascript")
   const [codeKeybinding, setCodeKeybinding] = useState(() => undefined)
 
-  const languagesAvailable = ["javascript", "java", "c_cpp", "python", "typescript", "golang", "yaml", "html"]
-  const codeKeybindingsAvailable = ["default", "emacs", "vim"]
+  const languagesAvailable = ["Javascript", "Java", "C++", "Python", "Typescript", "Golang", "Yaml", "HTML"]
+  const codeKeybindingsAvailable = ["Default", "Emacs", "Vim"]
 
   function onChange(newValue) {
     setFetchedCode(newValue)
@@ -127,7 +127,7 @@ export default function Room({ socket }) {
           </div>
         </div>
 
-        <button className="roomSidebarCopyBtn" onClick={() => { copyToClipboard(roomId) }}>Copy Room id</button>
+        <button className="roomSidebarCopyBtn" onClick={() => { copyToClipboard(roomId) }}>Copy Room ID</button>
         <button className="roomSidebarBtn" onClick={() => {
           handleLeave()
         }}>Leave</button>
@@ -144,7 +144,7 @@ export default function Room({ socket }) {
         height="auto"
         value={fetchedCode}
         onChange={onChange}
-        fontSize={15}
+        fontSize={22}
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={true}
