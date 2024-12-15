@@ -4,7 +4,9 @@
   "description": "* multiple users can join a room for simultaneous editing in realtime.\r * single user creates a room.\r * user who created/joined the room can share the room ID for invite.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build"
+
   },
   "author": "",
   "license": "ISC"
